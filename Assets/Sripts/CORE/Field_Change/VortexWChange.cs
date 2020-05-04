@@ -6,18 +6,17 @@ using UnityEngine.UI;
 public class VortexWChange : MonoBehaviour {
 
 	//public GameObject cube;
-	public Slider VortexSlider;
+	public Slider aSlider;
+	public Slider sigmaSlider;
+	public Toggle VortexToggle;
 
 	public void ChangeVortexW()
 	{
-		/*cube.transform.localScale = new Vector3(2.0f*VortexSlider.value,
-			                                    2.0f*VortexSlider.value,
-			                                    2.0f*VortexSlider.value);*/
-		GlobalVariable.VortexW = 2.0f * VortexSlider.value;
+		if (VortexToggle.isOn == true)
+		{
+			GlobalVariable.VortexA = aSlider.value;
+			GlobalVariable.VortexSigma = sigmaSlider.value;
+			GlobalVariable.VortexW = 2.0f * GlobalVariable.VortexA * Mathf.Exp(1.0f/Mathf.Pow(GlobalVariable.VortexSigma,2));
+		}
 	}
-
-	/*void Start()
-	{
-		cube.transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
-	}*/
 }

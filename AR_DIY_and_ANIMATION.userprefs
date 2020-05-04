@@ -1,0 +1,25 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Sripts\CORE\ModeControl.cs">
+    <Files>
+      <File FileName="Assets\Sripts\CORE\GlobalVariable.cs" Line="35" Column="38" />
+      <File FileName="Assets\Sripts\CORE\CubeController.cs" Line="175" Column="75" />
+      <File FileName="Assets\OffsetChange.cs" Line="114" Column="54" />
+      <File FileName="Assets\Sripts\CORE\Field_Change\Source_OnClink.cs" Line="37" Column="12" />
+      <File FileName="Assets\Sripts\CORE\Field_Change\Sink_OnClink.cs" Line="41" Column="11" />
+      <File FileName="Assets\Sripts\CORE\Field_Change\Vortex_OnClink.cs" Line="45" Column="55" />
+      <File FileName="Assets\Sripts\CORE\Field_Change\Uniform_OnClink.cs" Line="49" Column="60" />
+      <File FileName="Assets\Sripts\CORE\Field_Change\Emitter_OnClick.cs" Line="35" Column="42" />
+      <File FileName="Assets\X_OnClick.cs" Line="11" Column="30" />
+      <File FileName="Assets\Y_OnClick.cs" Line="4" Column="22" />
+      <File FileName="Assets\Z_OnClick.cs" Line="18" Column="21" />
+      <File FileName="Assets\Sripts\CORE\Field_Change\SourceWChange.cs" Line="13" Column="29" />
+      <File FileName="Assets\Sripts\CORE\Field_Change\VortexWChange.cs" Line="15" Column="1" />
+      <File FileName="Assets\Sripts\CORE\ModeControl.cs" Line="104" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -6,18 +6,17 @@ using UnityEngine.UI;
 public class UniformWChange : MonoBehaviour {
 
 	//public GameObject cube;
-	public Slider UniformSlider;
+	public Slider aSlider;
+	public Slider sigmaSlider;
+	public Toggle UniformToggle;
 
 	public void ChangeUniformW()
 	{
-		/*cube.transform.localScale = new Vector3(2.0f*UniformSlider.value,
-			                                    2.0f*UniformSlider.value,
-			2.0f*UniformSlider.value);*/
-		GlobalVariable.UniformW = 2.0f * UniformSlider.value;
+		if (UniformToggle.isOn == true)
+		{
+			GlobalVariable.UniformA = aSlider.value;
+			GlobalVariable.UniformSigma = sigmaSlider.value;
+			GlobalVariable.UniformW = 2.0f * GlobalVariable.UniformA * Mathf.Exp(1.0f/Mathf.Pow(GlobalVariable.UniformSigma,2));
+		}
 	}
-
-	/*void Start()
-	{
-		cube.transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
-	}*/
 }

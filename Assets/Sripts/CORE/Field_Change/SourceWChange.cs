@@ -6,18 +6,17 @@ using UnityEngine.UI;
 public class SourceWChange : MonoBehaviour {
 
 	//public GameObject cube;
-	public Slider SourceSlider;
+	public Slider aSlider;
+	public Slider sigmaSlider;
+	public Toggle SourceToggle;
 
 	public void ChangeSourceW()
 	{
-		/*cube.transform.localScale = new Vector3(2.0f*SourceSlider.value,
-			                                    2.0f*SourceSlider.value,
-			2.0f*SourceSlider.value);*/
-		GlobalVariable.SourceW = 2.0f * SourceSlider.value;
+		if (SourceToggle.isOn == true)
+		{
+			GlobalVariable.SourceA = aSlider.value;
+			GlobalVariable.SourceSigma = sigmaSlider.value;
+			GlobalVariable.SourceW = 2.0f * GlobalVariable.SourceA * Mathf.Exp(1.0f/Mathf.Pow(GlobalVariable.SourceSigma,2));
+		}
 	}
-
-	/*void Start()
-	{
-		cube.transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
-	}*/
 }

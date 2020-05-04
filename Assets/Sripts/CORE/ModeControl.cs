@@ -90,7 +90,20 @@ public class ModeControl : MonoBehaviour
     {
 		if (DirectorModeToggle.isOn == true && AudienceModeToggle.isOn == false)// Director Mode
 			DirectorModeCanvas.SetActive (true);
-		else if (DirectorModeToggle.isOn == false && AudienceModeToggle.isOn == true)// Audience Mode
+		else if (DirectorModeToggle.isOn == false && AudienceModeToggle.isOn == true) // Audience Mode
+		{
 			DirectorModeCanvas.SetActive (false);
+			GameObject axis;
+			axis = GameObject.Find ("ssource");
+			axis.transform.localScale = new Vector3 (0.00f, 0.00f, 0.00f);
+			axis = GameObject.Find ("ssink");
+			axis.transform.localScale = new Vector3 (0.00f, 0.00f, 0.00f);
+			axis = GameObject.Find ("uuniform");
+			axis.transform.localScale = new Vector3 (0.00f, 0.00f, 0.00f);
+			axis = GameObject.Find ("vvortex");
+			axis.transform.localScale = new Vector3 (0.00f, 0.00f, 0.00f);
+			axis = GameObject.Find ("uuniform");
+			axis.transform.localScale = new Vector3 (0.00f, 0.00f, 0.00f);
+		}
 	}
 }

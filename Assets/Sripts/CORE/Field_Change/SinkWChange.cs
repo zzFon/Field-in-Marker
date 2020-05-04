@@ -6,18 +6,17 @@ using UnityEngine.UI;
 public class SinkWChange : MonoBehaviour {
 
 	//public GameObject cube;
-	public Slider SinkSlider;
+	public Slider aSlider;
+	public Slider sigmaSlider;
+	public Toggle SinkToggle;
 
 	public void ChangeSinkW()
 	{
-		/*cube.transform.localScale = new Vector3(2.0f*SinkSlider.value,
-			                                    2.0f*SinkSlider.value,
-			2.0f*SinkSlider.value);*/
-		GlobalVariable.SinkW = 2.0f * SinkSlider.value;
+		if (SinkToggle.isOn == true)
+		{
+			GlobalVariable.SinkA = aSlider.value;
+			GlobalVariable.SinkSigma = sigmaSlider.value;
+			GlobalVariable.SinkW = 2.0f * GlobalVariable.SinkA * Mathf.Exp(1.0f/Mathf.Pow(GlobalVariable.SinkSigma,2));
+		}
 	}
-
-	/*void Start()
-	{
-		cube.transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
-	}*/
 }
