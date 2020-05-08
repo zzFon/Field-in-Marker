@@ -1,4 +1,0 @@
-CubeController-识别Target 使得GameObject出现
-Mover-Object运动控制
-Rotator-Object的自旋效果
-DestroyByBoundary-抹掉出界的Object
